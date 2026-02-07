@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-brand-bgStart to-brand-bgEnd min-h-screen text-brand-text antialiased;
+  }
+}
+
+@layer components {
+
+  /* Premium App Shell */
+  .app-shell {
+    @apply max-w-7xl mx-auto px-4 md:px-8 py-8;
+  }
+
+  /* Premium Card (Crextio style) */
+  .card {
+    @apply bg-white rounded-card shadow-card p-6 transition-all duration-300 hover:shadow-cardHover;
+  }
+
+  .card-title {
+    @apply text-xl font-semibold text-brand-text;
+  }
+
+  /* Premium Stat Card */
+  .stat-card {
+    @apply bg-white rounded-card shadow-card p-6 flex items-center justify-between transition-all duration-300 hover:shadow-cardHover hover:-translate-y-1;
+  }
+
+  .stat-number {
+    @apply text-4xl font-bold text-brand-text tracking-tight;
+  }
+
+  .stat-label {
+    @apply text-sm text-brand-mutedText;
+  }
+
+  /* Primary Button (Golden accent) */
+  .btn-primary {
+    @apply px-6 py-3 bg-brand-accent text-brand-text font-semibold rounded-button shadow-button transition-all duration-200 hover:bg-brand-accentDark hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  /* Secondary Button */
+  .btn-secondary {
+    @apply px-6 py-3 bg-white text-brand-text font-medium rounded-button border border-brand-border transition-all duration-200 hover:bg-brand-pillBg hover:border-brand-accent/40;
+  }
+
+  /* Ghost Button */
+  .btn-ghost {
+    @apply px-4 py-2 text-brand-mutedText font-medium rounded-button transition-all duration-200 hover:text-brand-text hover:bg-brand-pillBg;
+  }
+
+  /* Input Fields */
+  .input {
+    @apply w-full px-4 py-3 bg-white border border-brand-border rounded-button text-brand-text placeholder-brand-mutedText/60 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-accent/30 focus:border-brand-accent;
+  }
+
+  .textarea {
+    @apply w-full px-4 py-3 bg-white border border-brand-border rounded-xl text-brand-text placeholder-brand-mutedText/60 resize-none transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-accent/30 focus:border-brand-accent;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-brand-text mb-2;
+  }
+
+  /* Navigation Pills */
+  .nav-pill {
+    @apply px-4 py-2 text-sm font-medium text-brand-mutedText rounded-pill transition-all duration-200 hover:text-brand-text hover:bg-brand-pillBg;
+  }
+
+  .nav-pill-active {
+    @apply bg-brand-text text-white shadow-sm;
+  }
+
+  /* Badge */
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-pill text-xs font-medium;
+  }
+
+  .badge-success {
+    @apply bg-emerald-100 text-emerald-700;
+  }
+
+  .badge-warning {
+    @apply bg-amber-100 text-amber-700;
+  }
+
+  .badge-info {
+    @apply bg-blue-100 text-blue-700;
+  }
+
+  /* Loading Skeleton */
+  .skeleton {
+    @apply bg-gradient-to-r from-brand-pillBg via-white to-brand-pillBg bg-[length:200%_100%] animate-shimmer rounded-lg;
+  }
+
+  /* Loading Spinner */
+  .spinner {
+    @apply w-5 h-5 border-2 border-brand-accent border-t-transparent rounded-full animate-spin;
+  }
+
+  .spinner-lg {
+    @apply w-10 h-10 border-4 border-brand-accent border-t-transparent rounded-full animate-spin;
+  }
+
+  /* Avatar */
+  .avatar {
+    @apply w-12 h-12 rounded-full bg-brand-pillBg flex items-center justify-center text-brand-text font-semibold shadow-sm;
+  }
+
+  /* Document Table Row */
+  .doc-row {
+    @apply p-4 bg-white rounded-xl border border-brand-border/50 transition-all duration-200 hover:shadow-card hover:border-brand-accent/30;
+  }
+
+  /* Icon Button */
+  .icon-btn {
+    @apply p-2 rounded-button text-brand-mutedText transition-all duration-200 hover:text-brand-text hover:bg-brand-pillBg;
+  }
+
+  /* Progress Bar */
+  .progress-bar {
+    @apply h-2 bg-brand-pillBg rounded-full overflow-hidden;
+  }
+
+  .progress-bar-fill {
+    @apply h-full bg-brand-accent rounded-full transition-all duration-500;
+  }
+
+  /* Fade-in animation for cards */
+  .animate-card {
+    @apply animate-slide-up;
+  }
+}
